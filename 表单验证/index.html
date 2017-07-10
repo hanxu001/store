@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<link rel="stylesheet" type="text/css" href="css/register.css" />
+
+<script type="text/javascript" src="js/jquery-1.8.3-min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.metadata.js"></script>
+<script type="text/javascript" src="js/resgin.js"></script>
+
+<title>表单验证</title>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <form id="signupForm" method="post" action="" class="zcform">
+        <p class="clearfix">
+        	<label class="one" for="telphone">手机号码：</label>
+        	<input id="telphone" name="telphone" class="required" value placeholder="请输入手机号" />
+        </p>
+        <p class="clearfix">
+        	<label class="one" >校验码：</label>
+            <input class="identifying_code" type="text" value placeholder="请输入手机6位校验码" />
+            <input class="get_code" type="button" value="获取验证码" />
+        </p>
+        <p class="clearfix">
+         	<label class="one"  for="password">登录密码：</label>
+        	<input id="password" name="password" type="password" class="{required:true,rangelength:[8,20],}" value placeholder="请输入密码" />
+        </p>
+        <p class="clearfix">
+        	<label class="one" for="confirm_password">确认密码：</label>
+        	<input id="confirm_password" name="confirm_password" type="password" class="{required:true,equalTo:'#password'}" value placeholder="请再次输入密码" />
+        </p>
+        <p class="clearfix">
+        	<label class="one" for="agent">经纪人号：</label>
+        	<input id="agent" name="agent" type="text" class="required" value placeholder="请输入经纪人手机号" />
+        </p>
+        <p class="clearfix agreement">
+        	<input type="checkbox" />
+            <b class="left">已阅读并同意<a href="#">《用户协议》</a></b>
+        </p>
+       	<p class="clearfix"><input class="submit" type="submit" value="立即注册"/></p>   
+        <p class="last"><a href="http://www.17sucai.com/">立即登录&gt;</a></p>
+    </form>
+</div>
+
+</body>
+</html>
