@@ -1,0 +1,111 @@
+.animated {
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+}
+
+.animated-short {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+
+.animated-infinite {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes myfadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-30%, 0, 0);
+        transform: translate3d(-30%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes myfadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-30%, 0, 0);
+        transform: translate3d(-30%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.myfadeInLeft {
+    -webkit-animation-name: myfadeInLeft;
+    animation-name: myfadeInLeft
+}
+
+@-webkit-keyframes myfadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(30%, 0, 0);
+        transform: translate3d(30%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes myfadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(30%, 0, 0);
+        transform: translate3d(30%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.myfadeInRight {
+    -webkit-animation-name: myfadeInRight;
+    animation-name: myfadeInRight
+}
+
+@-webkit-keyframes myrotateIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(-200deg);
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+}
+
+@keyframes myrotateIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(-200deg);
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+}
+
+.myrotateIn {
+    -webkit-animation-name: myrotateIn;
+    animation-name: myrotateIn
+}
+
