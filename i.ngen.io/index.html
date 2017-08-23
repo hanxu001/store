@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- FIN ANIM HOVER BT-CLIENTES-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>i.ngen.io - Data to understand the world</title>
+    <meta name="description" content="Ingenio revela el verdadero valor de los datos y de la información a través de su análisis y de su visualización.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <!-- INI ANIM HOVER BT-CLIENTES-->
+    <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+    <script src="http://code.createjs.com/tweenjs-0.5.0.min.js"></script>
+    <script src="http://code.createjs.com/movieclip-0.7.0.min.js"></script>
+    <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+    <script src="http://code.createjs.com/soundjs-0.5.2.min.js"></script>
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/menu.js"></script>
+    <meta property="og:image" content="http://i.ngen.io/wp-content/themes/ingenio/img/ingenio-site.png" />
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/animations.js"></script>
+    <meta property="og:description" content="Ingenio unveils the real value in data and information through its analysis and visual presentation" />
+    <script>
+    var canvas, stage, exportRoot;
+    var canvas2, stage2, exportRoot2;
+
+    function init() {
+        canvas = document.getElementById("canvas");
+        canvas2 = document.getElementById("canvas2");
+
+        var loader = new createjs.LoadQueue(false);
+        loader.installPlugin(createjs.Sound);
+        loader.addEventListener("complete", handleComplete);
+        loader.loadManifest(lib.properties.manifest);
+    }
+
+    function handleComplete() {
+        exportRoot = new lib.animations();
+
+        stage = new createjs.Stage(canvas);
+        stage.addChild(exportRoot);
+        stage.update();
+
+        exportRoot2 = new lib.menu();
+
+        stage2 = new createjs.Stage(canvas2);
+        stage2.addChild(exportRoot2);
+        stage2.update();
+
+        createjs.Ticker.setFPS(lib.properties.fps);
+        createjs.Ticker.addEventListener("tick", stage);
+        createjs.Ticker.addEventListener("tick", stage2);
+
+    }
+
+    function playSound(id, loop) {
+        createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+    }
+    </script>
+    <link rel="stylesheet" href="http://i.ngen.io/wp-content/themes/ingenio/css/main.css">
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body onload="init();">
+    <!-- 
+        <div class="fondo-grad init"></div> -->
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- background -->
+    <div class="bg-panels">
+        <div class="bg-panel bg-panel-00"><span></span></div>
+        <div class="bg-panel bg-panel-00-01"></div>
+        <div class="bg-panel bg-panel-01"><span></span></div>
+        <div class="bg-panel bg-panel-01-02"></div>
+        <div class="bg-panel bg-panel-02"><span></span></div>
+        <div class="bg-panel bg-panel-03"><span></span></div>
+        <div class="bg-panel bg-panel-04"><span></span></div>
+        <div class="bg-panel bg-panel-05"><span></span></div>
+        <div class="bg-panel bg-panel-05-06"></div>
+        <div class="bg-panel bg-panel-06"><span></span></div>
+    </div>
+    <header>
+        <div class="navbar" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div id="logo">
+                        <a href="index.html">
+                    <img src="http://i.ngen.io/wp-content/themes/ingenio/img/logo-blanco.png" alt=" i.ngen.io | Ingenio. Data to undestand the world">
+                  </a>
+                        <div class="mascara">
+                            <h1><a class="navbar-brand" href="index.html#">Ingenio</a></h1>
+                        </div>
+                    </div>
+                    <div class="lang">
+                        <ul>
+                            <li><a class="eng activo" href="index.html">ENG</a></li>
+                            <li><a class="esp " href="http://i.ngen.io/es">ESP</a></li>
+                        </ul>
+                    </div>
+                    <div class="bt-menu">
+                        <div class="wrapper">
+                            <div class="mascara">
+                                <span class="txt-menu"> menu </span>
+                            </div>
+                            <div class="sensor-bt-menu">
+                                <div class="navicon-button x">
+                                    <span class="navicon"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-desp">
+            <ul>
+                <li class="nav-item">
+                    <h2><a href="http://i.ngen.io/sobre-nosotros/" rel="1"> about us </a></h2>
+                    <h3><a href="http://i.ngen.io/sobre-nosotros/" rel="1"> who we are &amp; what we do </a></h3>
+                </li>
+                <li class="nav-item">
+                    <h2><a href="trabajos/index.html" rel="2">works</a></h2>
+                    <h3><a href="trabajos/index.html" rel="2"> good stuff </a></h3>
+                </li>
+                <li class="nav-item">
+                    <h2><a href="http://i.ngen.io/nuestros-clientes/" rel="3">clients</a></h2>
+                    <h3><a href="http://i.ngen.io/nuestros-clientes/" rel="3"> in trust we trust </a></h3>
+                </li>
+                <li class="nav-item">
+                    <h2><a href="http://i.ngen.io/contacto/" rel="4">contact</a></h2>
+                    <h3><a href="http://i.ngen.io/contacto/" rel="4"> stay in touch</a></h3>
+                </li>
+            </ul>
+            <canvas id="canvas2" width="550" height="400"></canvas>
+        </div>
+    </header>
+    <div class="bt-scroll-down">
+        <div id="bt-scroll-down-txt1"> how we do it </div>
+        <div id="bt-scroll-down-txt2">what we do </div>
+        <img src="http://i.ngen.io/wp-content/themes/ingenio/img/bt-flecha-down.png" alt="">
+    </div>
+    <div class="contenedor">
+        <canvas id="canvas" width="1200" height="600"></canvas>
+        <div class="bkg-cuadricula">
+            <div class="txt-ppal pag-2">
+                <p> we extract information from multiple sources and in multiple formats through automatized capturing and conversion processes. </p>
+            </div>
+            <div class="txt-ppal pag-3">
+                <p> we put and restore order in complex datasets, cleaning, refining and structuring them in order to extract all relevant information. </p>
+            </div>
+            <div class="txt-ppal pag-4">
+                <p> we create efficient and interactive visual tools to facilitate the individual and personal exploration of massive volumes of data.</p>
+            </div>
+            <div class="txt-ppal pag-5">
+                <p> we put an end to the daunting complexity challenge with new taylor-made applications ideally suited to meet our client's objetives </p>
+            </div>
+            <div class="txt-ppal pag-6">
+                <p> we create narratives and easy ways of interaction making data human, engaging and shareable. </p>
+                <a href="trabajos/index.html" class="button-view"> View our work </a>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="http://i.ngen.io/wp-content/themes/ingenio/js/vendor/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/vendor/bootstrap.min.js"></script>
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/gsap/TweenMax.min.js"></script>
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/gsap/plugins/ScrollToPlugin.min.js"></script>
+    <script src="http://i.ngen.io/wp-content/themes/ingenio/js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments) });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'http://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-55391708-1');
+    ga('send', 'pageview');
+    </script>
+    <div id="mensaje-rotar">
+        Please rotate your phone
+    </div>
+</body>
+
+</html>
