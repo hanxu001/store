@@ -51,7 +51,7 @@ function init() {
 	var PI2 = Math.PI * 2;
 	var material = new THREE.SpriteCanvasMaterial( {
 
-		color: 0x939393, //changes color of particles
+		color: 0x777, //changes color of particles
 		program: function ( context ) {
 
 			context.beginPath();
@@ -79,7 +79,7 @@ function init() {
 
 	renderer = new THREE.CanvasRenderer();
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer.setClearColor( 0xffffff, 1);
+	renderer.setClearColor( 0x000, 1);
 	container.appendChild( renderer.domElement );
 
 	window.addEventListener( 'resize', onWindowResize, false );
